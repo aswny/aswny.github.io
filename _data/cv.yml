@@ -19,17 +19,17 @@
   type: time_table
   contents:
     - title: NLP Data Scientist
-      institution: [ConcertAI](https://www.concertai.com/)
+      institution: <a href='https://www.concertai.com/'>ConcertAI</a>
       year: 2022-Current
       description:
         - Building state-of-the-art NLP algorithms in healthcare industry on Real World Data (RWD)
     - title: Data Scientist
-      institution: HSBC Asset Management
+      institution: <a href='https://www.assetmanagement.hsbc.co.in/en'>HSBC Asset Management</a>
       year: 2019 - 2022
       # description:
       #   - HSBC work description
     - title: Internship
-      institution: Sharekhan by BNP Paribas
+      institution: <a href='https://www.sharekhan.com/'>Sharekhan by BNP Paribas</a>
       year: 2014
       # description:
       #   - Internship work experience
