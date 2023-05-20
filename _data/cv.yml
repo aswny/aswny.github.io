@@ -2,38 +2,25 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Ashwani Yadav
     - name: Date of Birth
-      value: 14th March 1879
+      value: 9th August, 1995
     - name: Languages
-      value: English, German
+      value: English, Hindi
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+    - title: BS-MS (Dual Degree) in Mathematics & Scientific Computing
+      institution: Indian Institute of Technology, Kanpur
+      year: 2019
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: NLP Data Scientist
+      organization: ConcertAI
+      year: 2022-Current
       description:
         - Description 1.
         - Description 2.
