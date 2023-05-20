@@ -19,7 +19,7 @@
   type: time_table
   contents:
     - title: NLP Data Scientist
-      institution: <a href='https://www.concertai.com/'>ConcertAI</a>
+      institution: ConcertAI
       year: 2022 - now
       description: >
         As an NLP data scientist at a leading healthcare AI solutions 
@@ -31,7 +31,7 @@
         relationship extraction utilising latest large language model (LLM)
         architectures.
     - title: Data Scientist
-      institution: <a href='https://www.assetmanagement.hsbc.co.in/en'>HSBC Asset Management</a>
+      institution: HSBC Asset Management
       year: 2019 - 2022
       description:
         - title: ESG Engine
@@ -56,7 +56,7 @@
             success of early-stage ventures, providing valuable insights to inform 
             investment decisions and mitigate risks.
     - title: Internship
-      institution: <a href='https://www.sharekhan.com/'>Sharekhan by BNP Paribas</a>
+      institution: Sharekhan by BNP Paribas
       year: 2014
       description: >
         I developed an ML ensemble model using R to predict the likelihood 
