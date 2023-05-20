@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: *NLP Data Scientist* at [ConcertAI](https://www.concertai.com/)
+subtitle: <b>NLP Data Scientist</b> at <a href='https://www.concertai.com/'>ConcertAI</a>
 
 profile:
   align: right
@@ -16,7 +16,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am an NLP data scientist at [ConcertAI](https://www.concertai.com/), an organization at the forefront of accelerating oncology research and Real World Data (RWD) curation through cutting-edge AI solutions. My role entails utilizing advanced NLP algorithms, including state-of-the-art large language models, to extract valuable real-world evidence (RWE) from healthcare documents of oncology patients.
+I am an NLP data scientist at ConcertAI, an organization at the forefront of accelerating oncology research and Real World Data (RWD) curation through cutting-edge AI solutions. My role entails utilizing advanced NLP algorithms, including state-of-the-art large language models, to extract valuable real-world evidence (RWE) from healthcare documents of oncology patients.
 
 Before joining ConcertAI, I had the pleasure of working at HSBC Asset Management, where I delved into designing machine learning prototypes and constructing end-to-end data engineering pipelines. This endeavor involved identifying the carbon ratings of corporate entities by leveraging economic, social, and governance indicators.
 
