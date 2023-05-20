@@ -33,9 +33,8 @@
     - title: Data Scientist
       institution: <a href='https://www.assetmanagement.hsbc.co.in/en'>HSBC Asset Management</a>
       year: 2019 - 2022
-      description:
         - title: ESG Engine
-          contents: >
+          description:
           I developed an end-to-end centralized ESG framework, enabling 
           accurate ESG score assessments for a vast array of financial 
           instruments. Leveraging PySpark, I engineered an efficient data 
@@ -47,7 +46,7 @@
           the BigQuery engine and Spark configurations, I achieved an impressive 
           40% improvement in the framework's run-time.
         - title: Venture Capital Investments
-          contents: >
+          description: >
           I undertook the development of a statistical machine learning model 
           with the venture capital team, aimed at predicting the likelihood of 
           success for early-stage startups. By leveraging relevant startup data, 
