@@ -35,26 +35,26 @@
       year: 2019 - 2022
       description:
         - title: ESG Engine
-          # contents: >
-          # I developed an end-to-end centralized ESG framework, enabling 
-          # accurate ESG score assessments for a vast array of financial 
-          # instruments. Leveraging PySpark, I engineered an efficient data 
-          # sourcing and aggregation engine on a multi-node GCP Dataproc 
-          # cluster. Additionally, I successfully fine-tuned a BERT-based 
-          # financial text sentiment model to proactively identify the 
-          # prevailing market narrative surrounding entities and its potential 
-          # impact on future ratings.. Through strategic optimizations utilizing 
-          # the BigQuery engine and Spark configurations, I achieved an impressive 
-          # 40% improvement in the framework's run-time.
+          contents: >
+          I developed an end-to-end centralized ESG framework, enabling 
+          accurate ESG score assessments for a vast array of financial 
+          instruments. Leveraging PySpark, I engineered an efficient data 
+          sourcing and aggregation engine on a multi-node GCP Dataproc 
+          cluster. Additionally, I successfully fine-tuned a BERT-based 
+          financial text sentiment model to proactively identify the 
+          prevailing market narrative surrounding entities and its potential 
+          impact on future ratings.. Through strategic optimizations utilizing 
+          the BigQuery engine and Spark configurations, I achieved an impressive 
+          40% improvement in the framework's run-time.
         - title: Venture Capital Investments
-          # contents: >
-          # I undertook the development of a statistical machine learning model 
-          # with the venture capital team, aimed at predicting the likelihood of 
-          # success for early-stage startups. By leveraging relevant startup data, 
-          # such as financial metrics, market trends, and team composition, I 
-          # released a proof-of-concept (PoC) model which quantified the potential 
-          # success of early-stage ventures, providing valuable insights to inform 
-          # investment decisions and mitigate risks.
+          contents: >
+          I undertook the development of a statistical machine learning model 
+          with the venture capital team, aimed at predicting the likelihood of 
+          success for early-stage startups. By leveraging relevant startup data, 
+          such as financial metrics, market trends, and team composition, I 
+          released a proof-of-concept (PoC) model which quantified the potential 
+          success of early-stage ventures, providing valuable insights to inform 
+          investment decisions and mitigate risks.
     - title: Internship
       institution: <a href='https://www.sharekhan.com/'>Sharekhan by BNP Paribas</a>
       year: 2014
