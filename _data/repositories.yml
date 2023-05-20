@@ -1,4 +1,7 @@
 github_users:
   - aswny
 
-# github_repos:
+github_repos:
+  - aswny/ml-notebooks
+  - aswny/arithmetic-game
+  - aswny/virtual_mf_portfolio
