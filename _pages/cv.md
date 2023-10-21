@@ -4,5 +4,5 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 1
-cv_pdf: \[PUBLIC\]\ Resume\ Ashwani.pdf
+cv_pdf: public_resume_ashwani.pdf
 ---
