@@ -30,6 +30,17 @@
         entity linking to standard concepts, classification and 
         relationship extraction utilising latest large language model (LLM)
         architectures.
+
+        I have been involved in causal LM (generative models) training and
+        fine-tuning efforts on biomedical domain to assess the effectiveness 
+        of these models on internal use-cases. I've gained experience on
+        SOTA training infrastructure with these projects such as
+        distributed systems (Deepspeed ZeRO/ FSDP on NVIDIA A100s), 
+        🤗 transformers and several model architechtures.
+
+        I've been designing and building an intenal platform from ground-up
+        which utilises LLMs end-to-end as orchestrator and writing assistants.
+
     - title: Data Scientist
       institution: <a href='https://www.assetmanagement.hsbc.co.in/en'>HSBC Asset Management</a>
       year: 2019 - 2022
