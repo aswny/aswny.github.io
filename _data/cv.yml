@@ -37,10 +37,10 @@
         of these models on internal use-cases. I've gained experience on
         SOTA training infrastructure with these projects such as
         distributed systems (Deepspeed ZeRO/ FSDP on NVIDIA A100s), 
-        🤗 transformers and several model architechtures.
+        🤗 transformers and latest model architectures.
 
 
-        I've been designing and building an intenal platform from ground-up
+        I've been designing and building an internal platform from ground-up
         which utilises LLMs end-to-end as orchestrator and writing assistants.
 
     - title: Data Scientist
