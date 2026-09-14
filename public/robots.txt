@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aswny.github.io/sitemap.xml
