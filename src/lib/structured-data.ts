@@ -8,7 +8,10 @@ export function generatePersonStructuredData() {
     alternateName: RESUME_DATA.initials,
     description: RESUME_DATA.about,
     url: RESUME_DATA.personalWebsiteUrl,
-    image: RESUME_DATA.avatarUrl,
+    image: new URL(
+      RESUME_DATA.avatarUrl,
+      RESUME_DATA.personalWebsiteUrl
+    ).toString(),
     sameAs: RESUME_DATA.contact.social.map((social) => social.url),
     address: {
       "@type": "Place",
