@@ -22,7 +22,7 @@ export const RESUME_DATA: ResumeData = {
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/ashwani1952/",
+        url: "https://www.linkedin.com/in/ashwani1952",
         icon: "linkedin",
       },
       {
