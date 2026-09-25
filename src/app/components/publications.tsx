@@ -3,6 +3,24 @@ import type { RESUME_DATA } from "@/data/resume-data";
 
 type Publication = (typeof RESUME_DATA)["publications"][number];
 
+const SELF_AUTHOR = "Ashwani Ashwani";
+
+/**
+ * Renders the author list with the site owner's name emphasised
+ */
+function Authors({ authors }: { authors: string }) {
+  const [before, after] = authors.split(SELF_AUTHOR);
+  if (after === undefined) return <>{authors}</>;
+
+  return (
+    <>
+      {before}
+      <strong className="font-semibold text-foreground">{SELF_AUTHOR}</strong>
+      {after}
+    </>
+  );
+}
+
 interface PublicationsProps {
   publications: readonly Publication[];
 }
@@ -36,6 +54,9 @@ export function Publications({ publications }: PublicationsProps) {
                 {publication.year}
               </span>
             </div>
+            <p className="font-mono text-xs text-foreground/60 print:text-[10px]">
+              <Authors authors={publication.authors} />
+            </p>
             <p className="font-mono text-xs text-foreground/80 print:text-[10px]">
               {publication.venue}
             </p>

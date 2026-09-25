@@ -8,7 +8,7 @@ export const RESUME_DATA: ResumeData = {
   about:
     "Lead Data Scientist building clinical NLP and fine-tuned LLM systems for oncology real-world data.",
   summary:
-    "Lead Data Scientist at ConcertAI with 7+ years in machine learning, the last four focused on clinical NLP and large language models. I fine-tune open-weight LLMs (SFT, DPO, distillation), optimise GPU inference, and design multi-agent systems that turn unstructured oncology records into research-grade data — from scoping with clinicians to shipping in production. Before that I built ESG and data-quality frameworks at HSBC Asset Management. BS–MS in Mathematics & Scientific Computing from IIT Kanpur. Fall in love with the problem, not the solution.",
+    "Lead Data Scientist at ConcertAI with 7+ years in machine learning, the last four focused on clinical NLP and large language models. I fine-tune open-weight LLMs (SFT, DPO, distillation), optimise GPU inference, and design multi-agent systems that turn unstructured oncology records into research-grade data — from scoping with clinicians to shipping in production. Before that I built ESG and data-quality frameworks at HSBC Asset Management.",
   avatarUrl: "/profile.jpeg",
   personalWebsiteUrl: "https://aswny.github.io",
   contact: {
@@ -78,7 +78,7 @@ export const RESUME_DATA: ResumeData = {
           ],
         },
         {
-          title: "Clinical trial eligibility → executable cohort queries",
+          title: "Clinical trial eligibility digitisation",
           period: "2023 – 2024",
           highlights: [
             "Built a multi-agent LLM system (AutoGen) that turns free-text trial eligibility criteria into structured queries across 40+ clinical entity types, with self-correction loops and human-in-the-loop review",
@@ -183,16 +183,20 @@ export const RESUME_DATA: ResumeData = {
   ],
   publications: [
     {
-      title: "ASCO Annual Meeting abstract e13607",
-      venue: "Journal of Clinical Oncology 43(16_suppl), e13607",
+      title:
+        "Comparing traditional NLP methods and LLM-based extraction for identifying biomarkers in lung cancer",
+      authors:
+        "Payal Keswarpu, Nikita Singh, Kuldeep Jiwani, Bramhini A, Pyeush Gurha, Shubhrita Tiwari, Ashwani Ashwani, Vishal Samal, Vivek Agarwal, Marissa Lawrence, Rocio Martin",
+      venue: "Journal of Clinical Oncology 2025 43:16_suppl, e13607",
       year: "2025",
       href: "https://ascopubs.org/doi/10.1200/JCO.2025.43.16_suppl.e13607",
     },
     {
       title:
         "Development of natural language processing (NLP) models for extracting key features from unstructured notes to create real-world data (RWD) assets for clinical research at scale",
-      venue:
-        "Journal of Clinical Oncology 41(16_suppl), 6607 · ASCO Annual Meeting",
+      authors:
+        "Rohini George, Vivek Prabhakar Vaidya, Sangavai Chakkrapani, Rambaksh Prajapati, Srikanth Tankala, Dhaval Parmar, Vinay Phani Santosh Lakkimsetty, Tapasya Bhardwaj, Ashwani Ashwani, Emma Mendonca, Babu Narayanan, Krishna Kumar Swaminathan, Pranay Mukherjee",
+      venue: "Journal of Clinical Oncology 2023 41:16_suppl, 6607",
       year: "2023",
       href: "https://ascopubs.org/doi/10.1200/JCO.2023.41.16_suppl.6607",
     },
@@ -201,7 +205,7 @@ export const RESUME_DATA: ResumeData = {
     {
       project: "LiteLLM",
       description:
-        "Fixed the AWS Bedrock Llama 3.1 integration in the LLM gateway used by production copilots.",
+        "Fixed Llama 3 models on AWS Bedrock returning garbled output by choosing the right prompt template for chat vs. instruct models.",
       link: {
         label: "BerriAI/litellm#3298",
         href: "https://github.com/BerriAI/litellm/pull/3298",
@@ -209,16 +213,17 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       project: "LiteLLM",
-      description: "Fixed the AWS Bedrock Llama 4 integration.",
+      description:
+        "Added Llama 4 support to the Bedrock invoke route by reusing the Llama 3 chat template (shared tokenizer), with unit tests.",
       link: {
         label: "BerriAI/litellm#10557",
         href: "https://github.com/BerriAI/litellm/pull/10557",
       },
     },
     {
-      project: "AutoGen",
+      project: "Microsoft AutoGen",
       description:
-        "Contributed an enhancement to Microsoft's multi-agent framework, used across our agent products.",
+        "Let GroupChatManager.resume() take a custom function for removing termination strings, so group chats whose agents end with different keywords can be resumed; with tests and docs.",
       link: {
         label: "microsoft/autogen#2804",
         href: "https://github.com/microsoft/autogen/pull/2804",
@@ -254,6 +259,16 @@ export const RESUME_DATA: ResumeData = {
       link: {
         label: "bulls-and-cows-exb.pages.dev",
         href: "https://bulls-and-cows-exb.pages.dev/",
+      },
+    },
+    {
+      title: "NumberDash",
+      techStack: ["JavaScript", "Game"],
+      description:
+        "A fast-paced mental arithmetic game for drilling quick calculations.",
+      link: {
+        label: "numberdash.pages.dev",
+        href: "https://numberdash.pages.dev/",
       },
     },
   ],

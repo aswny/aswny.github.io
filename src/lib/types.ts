@@ -55,6 +55,7 @@ export interface ResumeData {
   }>;
   publications: Array<{
     title: string;
+    authors: string;
     venue: string;
     year: string;
     href: string;
