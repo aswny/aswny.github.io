@@ -61,10 +61,10 @@ export const RESUME_DATA: ResumeData = {
           title: "Clinical information extraction with fine-tuned LLMs",
           period: "2024 – Present",
           highlights: [
-            "Designed and shipped 9 production LLM agents that extract structured oncology variables — biomarkers, metastasis, progression, dates, imaging, radiation, smoking, alcohol and assertion — from clinical notes, all at F1 > 0.85 in production",
+            "Fine-tuned and shipped 20+ production LLM agents that extract 150+ structured oncology fields from unstructured clinical notes, all at F1 > 0.9",
             "Trained them by teacher–student distillation (gpt-oss-120b → gpt-oss-20b) on a mixture of clinical reasoning traces, summaries and structured JSON, then DPO on clinician-annotated preferences",
             "Built LoRA SFT/DPO pipelines across three framework generations (Hugging Face TRL → NVIDIA NeMo Curator → NeMo AutoModel) with DeepSpeed ZeRO on 8×A100, including PHI scrubbing and semantic deduplication; early SFT work gave +30% F1 on clinical NER and +40% Q&A accuracy",
-            "Built patient-journey agents that reconstruct disease, progression and treatment timelines across encounters, and agents that read pathology and imaging PDFs, evaluating vision-language models for scanned reports",
+            "Built agents that reconstruct longitudinal patient journeys across encounters and that read clinical report PDFs, evaluating vision-language models for scanned documents",
             "Benchmarked vLLM and NVIDIA NIM inference profiles (TensorRT-LLM, tensor parallelism, LoRA adapters) and served gpt-oss on vLLM ahead of official NIM images to unblock agent development",
           ],
         },
@@ -90,7 +90,7 @@ export const RESUME_DATA: ResumeData = {
           period: "2022 – 2024",
           highlights: [
             "Developed clinical NER models (spaCy, BERT) for curating oncology real-world data covering 5.4 million patients (ASCO 2023)",
-            "Trained a TF-IDF + XGBoost document classifier across 30+ classes at 0.87 macro-F1; improved an LLM extraction pipeline's metastasis F1 from 0.70 to 0.85 and biomarker F1 from 0.70 to 0.90",
+            "Trained a TF-IDF + XGBoost document classifier across 30+ classes at 0.87 macro-F1; lifted an LLM extraction pipeline's F1 from 0.70 to as high as 0.90 through inference and prompt improvements",
             "Built a Streamlit + PostgreSQL annotation tool used daily by clinical annotators for quality control; mentored an intern and a junior colleague",
           ],
         },
@@ -185,8 +185,6 @@ export const RESUME_DATA: ResumeData = {
     {
       title:
         "Comparing traditional NLP methods and LLM-based extraction for identifying biomarkers in lung cancer",
-      authors:
-        "Payal Keswarpu, Nikita Singh, Kuldeep Jiwani, Bramhini A, Pyeush Gurha, Shubhrita Tiwari, Ashwani Ashwani, Vishal Samal, Vivek Agarwal, Marissa Lawrence, Rocio Martin",
       venue: "Journal of Clinical Oncology 2025 43:16_suppl, e13607",
       year: "2025",
       href: "https://ascopubs.org/doi/10.1200/JCO.2025.43.16_suppl.e13607",
@@ -194,8 +192,6 @@ export const RESUME_DATA: ResumeData = {
     {
       title:
         "Development of natural language processing (NLP) models for extracting key features from unstructured notes to create real-world data (RWD) assets for clinical research at scale",
-      authors:
-        "Rohini George, Vivek Prabhakar Vaidya, Sangavai Chakkrapani, Rambaksh Prajapati, Srikanth Tankala, Dhaval Parmar, Vinay Phani Santosh Lakkimsetty, Tapasya Bhardwaj, Ashwani Ashwani, Emma Mendonca, Babu Narayanan, Krishna Kumar Swaminathan, Pranay Mukherjee",
       venue: "Journal of Clinical Oncology 2023 41:16_suppl, 6607",
       year: "2023",
       href: "https://ascopubs.org/doi/10.1200/JCO.2023.41.16_suppl.6607",
@@ -263,9 +259,9 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       title: "NumberDash",
-      techStack: ["JavaScript", "Game"],
+      techStack: ["TypeScript", "Adaptive difficulty", "PWA"],
       description:
-        "A fast-paced mental arithmetic game for drilling quick calculations.",
+        "A mental-arithmetic speed sprint that adapts to the player: problems are scored from their structure (carries, borrows, times-table facts) and an online model of answer times picks the next one across 9 skill areas.",
       link: {
         label: "numberdash.pages.dev",
         href: "https://numberdash.pages.dev/",
