@@ -8,7 +8,7 @@ export const RESUME_DATA: ResumeData = {
   about:
     "Lead Data Scientist building clinical NLP and fine-tuned LLM systems for oncology real-world data.",
   summary:
-    "7+ years in machine learning, the last four at ConcertAI turning unstructured oncology records into research-grade data with fine-tuned open-weight LLMs. I fine-tune open-weight LLMs (SFT, DPO, distillation), optimise GPU inference, and design multi-agent systems — from scoping with clinicians to shipping in production. Before that I built ESG and data-quality frameworks at HSBC Asset Management.",
+    "7+ years in machine learning, the last four at ConcertAI turning unstructured oncology records into research-grade data with fine-tuned open-weight LLMs. My work spans SFT, DPO and distillation, GPU inference optimisation and multi-agent system design — from scoping with clinicians to shipping in production. Before that I built ESG and data-quality frameworks at HSBC Asset Management.",
   avatarUrl: "/profile.jpeg",
   personalWebsiteUrl: "https://aswny.github.io",
   contact: {
