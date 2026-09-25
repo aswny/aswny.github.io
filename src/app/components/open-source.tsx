@@ -23,20 +23,25 @@ export function OpenSource({ contributions }: OpenSourceProps) {
       >
         {contributions.map((contribution) => (
           <li
-            key={contribution.link.href}
+            key={contribution.project}
             className="text-pretty font-mono text-xs text-foreground/80 print:text-[10px]"
           >
             <span className="font-sans font-semibold text-foreground">
               {contribution.project}
             </span>{" "}
-            <a
-              className="underline-offset-2 hover:underline"
-              href={contribution.link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {contribution.link.label}
-            </a>{" "}
+            {contribution.links.map((link, index) => (
+              <span key={link.href}>
+                {index > 0 && ", "}
+                <a
+                  className="underline-offset-2 hover:underline"
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.label}
+                </a>
+              </span>
+            ))}{" "}
             — {contribution.description}
           </li>
         ))}

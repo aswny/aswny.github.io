@@ -60,7 +60,7 @@ export function generateWebPageStructuredData() {
     name: `${RESUME_DATA.name} - Resume`,
     description: RESUME_DATA.about,
     url: RESUME_DATA.personalWebsiteUrl,
-    inLanguage: "en-US",
+    inLanguage: "en-GB",
     isPartOf: {
       "@type": "WebSite",
       name: `${RESUME_DATA.name}'s Professional Resume`,

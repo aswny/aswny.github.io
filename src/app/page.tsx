@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: `${RESUME_DATA.name} - Resume`,
     description: RESUME_DATA.about,
     type: "profile",
-    locale: "en_US",
+    locale: "en_GB",
     images: [
       {
         url: `${RESUME_DATA.personalWebsiteUrl}/opengraph-image.png`,

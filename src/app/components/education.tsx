@@ -18,7 +18,7 @@ function EducationPeriod({ start, end }: EducationPeriodProps) {
       className="text-sm tabular-nums text-gray-500"
       title={`Period: ${start} to ${end}`}
     >
-      {start} - {end}
+      {start} – {end}
     </div>
   );
 }

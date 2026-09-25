@@ -62,10 +62,10 @@ export interface ResumeData {
   openSource: Array<{
     project: string;
     description: string;
-    link: {
+    links: Array<{
       label: string;
       href: string;
-    };
+    }>;
   }>;
   projects: Array<{
     title: string;
