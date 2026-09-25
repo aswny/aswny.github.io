@@ -25,7 +25,7 @@ export function generatePersonStructuredData() {
         : {}),
       contactType: "personal",
     },
-    jobTitle: RESUME_DATA.work[0]?.title ?? "Data Scientist",
+    jobTitle: RESUME_DATA.work[0]?.roles[0]?.title ?? "Data Scientist",
     worksFor:
       RESUME_DATA.work.length > 0
         ? {
@@ -38,16 +38,18 @@ export function generatePersonStructuredData() {
       "@type": "EducationalOrganization",
       name: edu.school,
     })),
-    hasOccupation: RESUME_DATA.work.map((job) => ({
-      "@type": "Occupation",
-      name: job.title,
-      occupationLocation: {
-        "@type": "Place",
-        name: RESUME_DATA.location,
-      },
-      occupationalCategory: "Data Science",
-    })),
-    knowsAbout: RESUME_DATA.skills,
+    hasOccupation: RESUME_DATA.work
+      .flatMap((job) => job.roles)
+      .map((role) => ({
+        "@type": "Occupation",
+        name: role.title,
+        occupationLocation: {
+          "@type": "Place",
+          name: RESUME_DATA.location,
+        },
+        occupationalCategory: "Data Science",
+      })),
+    knowsAbout: RESUME_DATA.skills.flatMap((group) => group.items),
   };
 }
 

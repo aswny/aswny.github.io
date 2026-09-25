@@ -34,13 +34,39 @@ export interface ResumeData {
     company: string;
     link: string;
     badges: string[];
-    title: string;
-    start: string;
-    end: string | null;
+    /** Most recent role first; `end: null` means current. */
+    roles: Array<{
+      title: string;
+      start: string;
+      end: string | null;
+    }>;
     description: string;
     highlights?: readonly string[];
+    /** Highlights grouped by project, rendered as sub-headings. */
+    sections?: Array<{
+      title: string;
+      period: string;
+      highlights: readonly string[];
+    }>;
   }>;
-  skills: string[];
+  skills: Array<{
+    category: string;
+    items: string[];
+  }>;
+  publications: Array<{
+    title: string;
+    venue: string;
+    year: string;
+    href: string;
+  }>;
+  openSource: Array<{
+    project: string;
+    description: string;
+    link: {
+      label: string;
+      href: string;
+    };
+  }>;
   projects: Array<{
     title: string;
     techStack: string[];

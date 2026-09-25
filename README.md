@@ -25,8 +25,10 @@ pnpm check:fix    # biome lint + format with auto-fix
 ## editing content
 
 All of the CV content lives in a single file: [`src/data/resume-data.ts`](src/data/resume-data.ts).
-Name, tagline, summary, contact links, work history, education, skills and
-projects are all fields on `RESUME_DATA` — no component changes needed.
+Name, tagline, summary, contact links, work history (roles and project
+sub-sections), publications, open-source contributions, education, grouped
+skills and side projects are all fields on `RESUME_DATA` — no component changes
+needed.
 
 Other things worth knowing:
 

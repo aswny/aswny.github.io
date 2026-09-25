@@ -39,20 +39,98 @@ function BadgeList({ className, badges }: BadgeListProps) {
 }
 
 interface WorkPeriodProps {
-  start: WorkExperience["start"];
-  end?: WorkExperience["end"];
+  start: string;
+  end: string | null;
+  className?: string;
 }
 
 /**
  * Displays the work period in a consistent format
  */
-function WorkPeriod({ start, end }: WorkPeriodProps) {
+function WorkPeriod({ start, end, className }: WorkPeriodProps) {
   return (
     <div
-      className="text-sm tabular-nums text-gray-500"
+      className={cn("shrink-0 text-sm tabular-nums text-gray-500", className)}
       title={`Employment period: ${start} to ${end ?? "Present"}`}
     >
-      {start} - {end ?? "Present"}
+      {start} – {end ?? "Present"}
+    </div>
+  );
+}
+
+interface RoleListProps {
+  roles: WorkExperience["roles"];
+}
+
+/**
+ * Renders the job title, or a promotion timeline when there are several roles
+ */
+function RoleList({ roles }: RoleListProps) {
+  const [current, ...previous] = roles;
+
+  return (
+    <div className="space-y-1">
+      <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
+        {current.title}
+      </h4>
+      {previous.length > 0 && (
+        <ul
+          className="list-none p-0 font-mono text-xs text-foreground/60 print:text-[10px]"
+          aria-label="Previous roles"
+        >
+          {previous.map((role) => (
+            <li key={role.title}>
+              {role.title}{" "}
+              <span className="tabular-nums">
+                ({role.start} – {role.end ?? "Present"})
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+interface HighlightListProps {
+  highlights: readonly string[];
+}
+
+function HighlightList({ highlights }: HighlightListProps) {
+  return (
+    <ul className="list-outside list-disc space-y-0.5 pl-4">
+      {highlights.map((highlight) => (
+        <li key={highlight}>{highlight}</li>
+      ))}
+    </ul>
+  );
+}
+
+interface ProjectSectionsProps {
+  sections: NonNullable<WorkExperience["sections"]>;
+}
+
+/**
+ * Renders highlights grouped under project sub-headings
+ */
+function ProjectSections({ sections }: ProjectSectionsProps) {
+  return (
+    <div className="mt-3 space-y-3 print:mt-1 print:space-y-1">
+      {sections.map((section) => (
+        <div key={section.title}>
+          <div className="flex items-baseline justify-between gap-x-2">
+            <h5 className="text-sm font-semibold text-foreground print:text-[11px]">
+              {section.title}
+            </h5>
+            <span className="shrink-0 text-xs tabular-nums text-gray-500 print:text-[10px]">
+              {section.period}
+            </span>
+          </div>
+          <div className="mt-1">
+            <HighlightList highlights={section.highlights} />
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -88,8 +166,10 @@ interface WorkExperienceItemProps {
  * Handles responsive layout for badges (mobile/desktop)
  */
 function WorkExperienceItem({ work }: WorkExperienceItemProps) {
-  const { company, link, badges, title, start, end, description, highlights } =
+  const { company, link, badges, roles, description, highlights, sections } =
     work;
+  const start = roles[roles.length - 1].start;
+  const end = roles[0].end;
 
   return (
     <Card className="border-none py-1 print:py-0">
@@ -105,20 +185,19 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
           <WorkPeriod start={start} end={end} />
         </div>
 
-        <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
-          {title}
-        </h4>
+        <RoleList roles={roles} />
       </CardHeader>
 
       <CardContent>
-        <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
-          {description}
+        <div className="mt-2 text-pretty text-xs text-foreground/80 print:mt-1 print:text-[10px]">
+          <p>{description}</p>
           {highlights && highlights.length > 0 && (
-            <ul className="list-inside list-disc">
-              {highlights.map((highlight) => (
-                <li key={highlight}>{highlight}</li>
-              ))}
-            </ul>
+            <div className="mt-1">
+              <HighlightList highlights={highlights} />
+            </div>
+          )}
+          {sections && sections.length > 0 && (
+            <ProjectSections sections={sections} />
           )}
         </div>
         <div className="mt-2">
@@ -152,7 +231,7 @@ export function WorkExperience({ work }: WorkExperienceProps) {
         aria-labelledby="work-experience"
       >
         {work.map((item) => (
-          <article key={`${item.company}-${item.start}`}>
+          <article key={item.company}>
             <WorkExperienceItem work={item} />
           </article>
         ))}

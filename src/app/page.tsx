@@ -4,7 +4,9 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { generateResumeStructuredData } from "@/lib/structured-data";
 import { Education } from "./components/education";
 import { Header } from "./components/header";
+import { OpenSource } from "./components/open-source";
 import { Projects } from "./components/projects";
+import { Publications } from "./components/publications";
 import { Skills } from "./components/skills";
 import { Summary } from "./components/summary";
 import { WorkExperience } from "./components/work-experience";
@@ -103,17 +105,29 @@ export default function ResumePage() {
               className="animate-fade-in"
               style={{ animationDelay: "225ms" }}
             >
-              <Education education={RESUME_DATA.education} />
+              <Publications publications={RESUME_DATA.publications} />
             </div>
             <div
               className="animate-fade-in"
               style={{ animationDelay: "300ms" }}
             >
-              <Skills skills={RESUME_DATA.skills} />
+              <OpenSource contributions={RESUME_DATA.openSource} />
             </div>
             <div
               className="animate-fade-in"
               style={{ animationDelay: "375ms" }}
+            >
+              <Skills skills={RESUME_DATA.skills} />
+            </div>
+            <div
+              className="animate-fade-in"
+              style={{ animationDelay: "450ms" }}
+            >
+              <Education education={RESUME_DATA.education} />
+            </div>
+            <div
+              className="animate-fade-in"
+              style={{ animationDelay: "525ms" }}
             >
               <Projects projects={RESUME_DATA.projects} />
             </div>
