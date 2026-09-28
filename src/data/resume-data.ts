@@ -8,7 +8,7 @@ export const RESUME_DATA: ResumeData = {
   about:
     "Lead Data Scientist building clinical NLP and fine-tuned LLM systems for oncology real-world data.",
   summary:
-    "7+ years in machine learning, the last four at ConcertAI turning unstructured oncology records into research-grade data with fine-tuned open-weight LLMs. My work spans SFT, DPO and distillation, GPU inference optimisation and multi-agent system design — from scoping with clinicians to shipping in production. Before that I built ESG and data-quality frameworks at HSBC Asset Management.",
+    "7+ years in machine learning, the last four at ConcertAI turning unstructured oncology records into research-grade data with fine-tuned open-weight LLMs. My work spans SFT and distillation, GPU inference optimisation and multi-agent system design — from scoping with clinicians to shipping in production. Before that I built ESG and data-quality frameworks at HSBC Asset Management.",
   avatarUrl: "/profile.jpeg",
   personalWebsiteUrl: "https://aswny.github.io",
   contact: {
@@ -55,7 +55,7 @@ export const RESUME_DATA: ResumeData = {
         { title: "NLP Data Scientist", start: "Jul 2022", end: "Mar 2024" },
       ],
       description:
-        "Oncology real-world data and AI company. Joined as an early NLP hire; now own the company's portfolio of 20+ fine-tuned clinical extraction agents end to end — scoping with product, fine-tuning, evaluation with clinical SMEs, deployment and maintenance — with a team of 4 and the clinical, DevOps and CloudOps teams.",
+        "Oncology real-world data and AI company. Joined as an early NLP hire; now own the company's portfolio of 20+ fine-tuned clinical extraction agents end to end — scoping with product, fine-tuning, evaluation with clinical SMEs, deployment and maintenance — with a team of 4 and the clinical, DevOps and CloudOps teams. Interviewed for 5+ data science hires, junior to Staff.",
       sections: [
         {
           title:
@@ -63,10 +63,12 @@ export const RESUME_DATA: ResumeData = {
           period: "2022 – Present",
           highlights: [
             "Own 20+ production LLM agents that extract 150+ structured oncology fields from unstructured clinical notes; every field clears a 0.85 F1 release bar and 80% exceed 0.90 on held-out production sets curated by clinical SMEs",
-            "Fine-tuned 7B–20B open-weight models with LoRA SFT and DPO on NVIDIA NeMo AutoModel, using a data mixture of clinical reasoning traces, summaries and structured JSON, with PHI de-identification and semantic deduplication",
-            "Distilled a larger teacher model into a 20B student that reaches ~95% of the teacher's F1 and handles edge-case, ambiguous and hard cases more consistently, following product definitions where the teacher falls back on assumptions",
-            "Benchmarked vLLM and NVIDIA NIM inference profiles (TensorRT-LLM, tensor parallelism, LoRA adapters) with DevOps and CloudOps to maximise serving throughput; served new open-weight models on vLLM ahead of official NIM images to unblock agent development",
-            "Built agents that read clinical report PDFs, evaluating vision-language models for scanned pages, and agents that reconstruct longitudinal patient journeys across encounters",
+            "Built the evaluation suite the team uses as its release gate: it matches model outputs to SME-curated records, standardises codes (ICD, SNOMED, internal standards) and reports per-variable precision, recall, F1 and confusion matrices, with a record-level workbook for error analysis",
+            "Fine-tuned 7B–20B open-weight models with LoRA SFT on NVIDIA NeMo AutoModel, using a data mixture of clinical reasoning traces, summaries and structured JSON, with PHI de-identification and semantic deduplication",
+            "Distilled a 120B teacher into a production 20B student that keeps ~95% of the teacher's F1 and scores 20–50% higher relative F1 than the base 20B across variables, with more consistent instruction following and edge-case handling under internal product definitions",
+            "Ran LLM inference for production agents: benchmarked vLLM and NVIDIA NIM profiles (TensorRT-LLM, tensor parallelism, LoRA adapters) with DevOps and CloudOps, and served new open-weight models on vLLM ahead of official NIM images to unblock agent development",
+            "Built 5+ vision-language agents that run first-pass extraction on clinical report PDFs, including scanned pages, and feed downstream LLM extraction agents",
+            "Built agents that reconstruct longitudinal patient journeys across encounters",
             "Led fine-tuning research on early open models (GPT-J, Mistral-7B) with DeepSpeed and Hugging Face Transformers/Accelerate: +30% relative F1 on clinical NER and +40% Q&A accuracy without regressing base-model capability; mentored an intern for 6 months, publishing internal findings on clinical learning and catastrophic forgetting (2024)",
             "Designed prompt-based LLM extraction with product teams, lifting F1 from 0.70 to 0.85–0.90 on key fields through prompt and inference-engine improvements; compared LLM and traditional NLP extraction in an ASCO 2025 abstract (2023 – 2024)",
             "Trained clinical NER models (spaCy, BERT) for curating oncology real-world data covering 5.4 million patients (ASCO 2023), and a 30+ class document classifier at macro-F1 0.87 (2022 – 2023)",
@@ -79,8 +81,9 @@ export const RESUME_DATA: ResumeData = {
             "Researched open-source agent frameworks (LangChain deepagents, LangGraph, Claude Agent SDK) and chose deepagents for skills, subagents, filesystem-based memory and model-provider independence; built a deep-research agent that runs long multi-step analyses such as patient-journey concordance with clinical guidelines and market assessments, now in demo and expanding to more analysis types (2026)",
             "Returned for an end-to-end optimisation review of the production analytics copilot; refactored its core tools, cutting LLM token usage by 39% and entity-linking latency by 38% (2025)",
             "Led development of the reasoning core of a production conversational analytics copilot — data retrieval, analysis APIs, charts and conversation memory — directing 2 junior team members and working with 3 backend and 2 frontend engineers, 2 product managers and QA; migrated the copilot onto a microservices framework for sessions and user management (2024)",
+            "Introduced LiteLLM on the copilot to support AWS Bedrock and Azure OpenAI models; it is now the organisation-wide LLM gateway (2024)",
             "Built the analytics copilot proof of concept from scratch — a hand-rolled ReAct loop over the raw chat-completions API — which made the case for the production build (2023)",
-            "Built a multi-agent LLM system (AutoGen) that turns free-text trial eligibility criteria into structured queries across 40+ clinical entity types, with NER and relation-extraction agents, semantic search to ontology concepts (Sentence Transformers + reranker + FAISS) and human-in-the-loop review — 80% less time to digitise a typical 40-rule protocol (2023 – 2024)",
+            "Moved multi-agent flows from the native OpenAI SDK to AutoGen and built a multi-agent system that turns free-text trial eligibility criteria into structured queries across 40+ clinical entity types, with NER and relation-extraction agents, semantic search to ontology concepts (Sentence Transformers + reranker + FAISS) and human-in-the-loop review — 80% less time to digitise a typical 40-rule protocol (2023 – 2024)",
           ],
         },
       ],
@@ -217,40 +220,10 @@ export const RESUME_DATA: ResumeData = {
   ],
   projects: [
     {
-      title: "Chain of Why",
-      techStack: ["LLM", "Cloudflare Workers", "OpenRouter"],
-      description:
-        "A reflection tool that walks from a stated want to the value beneath it through a short chain of LLM-generated “why” questions. Stateless serverless backend, nothing stored.",
-      link: {
-        label: "chain-of-why.pages.dev",
-        href: "https://chain-of-why.pages.dev/",
-      },
-    },
-    {
-      title: "Pill · Pop · Potion",
-      techStack: ["LLM", "React", "Cloudflare D1", "TypeScript"],
-      description:
-        "Describe one thing you're turning over and get it back three ways — the route taken, the route not taken, and what only shows once both are seen. Privacy-first, with an opt-in public wall.",
-      link: {
-        label: "pill-pop-potion.pages.dev",
-        href: "https://pill-pop-potion.pages.dev/",
-      },
-    },
-    {
-      title: "Bulls & Cows",
-      techStack: ["React", "TypeScript", "PWA", "Playwright"],
-      description:
-        "The classic code-breaking game as an installable PWA, with visual clues, a tactile keypad and shareable results.",
-      link: {
-        label: "bulls-and-cows-exb.pages.dev",
-        href: "https://bulls-and-cows-exb.pages.dev/",
-      },
-    },
-    {
       title: "NumberDash",
       techStack: ["TypeScript", "Adaptive difficulty", "PWA"],
       description:
-        "A mental-arithmetic speed sprint that adapts to the player: problems are scored from their structure (carries, borrows, times-table facts) and an online model of answer times picks the next one across 9 skill areas.",
+        "A mental-arithmetic sprint with rule-based adaptive difficulty: each problem is picked by its structure and the player's answer times, across 9 skill areas.",
       link: {
         label: "numberdash.pages.dev",
         href: "https://numberdash.pages.dev/",
